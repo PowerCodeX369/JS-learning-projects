@@ -1,50 +1,42 @@
 /* From Uiverse.io by Praashoo7 */ 
 *{
     user-select:none;
-    ;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     background-color: black;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-image: url("assets/images/Art\ Love\ GIF\ by\ time.gif");
-    background-size:cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
+
     user-select:none
 }
-.cloud {
-    height: 180px; /* control the size */
-    aspect-ratio: 1.8;
-    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
-    mask: var(--g) 100% 100%/30% 60%,var(--g) 70% 0/50% 100%,var(--g) 0 100%/36% 68%,var(--g) 27% 18%/26% 40%,linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
-    background: #269af2;
-}
+
 nav{
-    background-color: rgba(43, 43, 43, 0.082);
-    backdrop-filter: blur(15px);
-    height: 50px ;
+
+    height: 15vh ;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+    align-items:end;
+
     
 }
 .searchbar{
-    background: rgba(7, 4, 4, 0.199);
-    backdrop-filter: blur(25px);
+    background: rgba(12, 9, 9, 0.096);
+    backdrop-filter: blur(8px);
     border-radius: 100px;
-    width:40%;
-    height:35px;
-    padding-left: 15px;
-    padding-right: 10px;
-    color: rgba(255, 255, 255, 0.575);
+    width:48%;
+    height:45px;
+    padding-left: 20px;
+    padding-right: 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid rgba(255, 255, 255, 0.212);
+    border: 1px solid rgba(255, 255, 255, 0.199);
     flex-direction: row;
 }
+
 .search{
     width: 80%;
     background: transparent;
@@ -55,14 +47,20 @@ nav{
     font-size: 1.01rem;
 }
 .searchbtn{
-    width: 25px;
-    height: 25px;
-    margin-right: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 100%;
+    margin-right:0;
+    border-radius: 100px;
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(122, 122, 122, 0.199);
 
 }
 .searchico{
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
     cursor: pointer;
 }
 .cardm {
@@ -96,14 +94,16 @@ nav{
   top: -3em;
   left: 4.3em;
   width: fit-content;
+  font-weight: bold;
 }
 
 .mainsub {
   position: relative;
-  top: -10.2em;
-  left: 14em;
-  font-size: 0.6em;
+  top: -6.7em;
+  left: 10em;
+  font-size: 0.85em;
   width:fit-content;
+
 }
 
 .card2 {
@@ -175,6 +175,31 @@ nav{
 }
 
 .realfeel {
-  margin-right: 1.8em;
+  margin-right: 7em;
 }
 
+@media only screen and (orientation: portrait) {
+  body {
+    background-image: url(assets/images/mobile.jpg);
+    background-repeat: no-repeat;
+  background-position:bottom right; /* Centers the image */
+  background-size: cover; /* This is the key property */
+  background-attachment:fixed;
+  }
+  .searchbar {
+    width: 70%;
+    height: 50px;
+  }
+  .searchbtn{
+    width:50px;
+  }
+}
+@media only screen and (orientation: landscape) {
+  body {
+    background-image: url(assets/images/desktop.jpg);
+      background-repeat: no-repeat;
+  background-position:bottom center; /* Centers the image */
+  background-size: cover; /* This is the key property */
+  background-attachment:fixed;
+  }
+}
